@@ -173,4 +173,4 @@ well — personal or community-blended — that's the most useful kind of
 bug report. Same goes for anything in Discover that looks obviously
 off: with a small early group of contributors, weird outliers are
 expected and worth flagging so they can be tuned.
-MESSAGE ME THE FEEDBACK ON THE REDDIT POST YOU FOUND THIS OR DM u/lik_manat
+MESSAGE ME THE FEEDBACK WITH A DM ON REDDIT u/lik_manat
