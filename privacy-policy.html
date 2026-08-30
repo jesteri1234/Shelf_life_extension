@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shelf Life — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; background: #f3f5f7; }
+  h1 { color: #2b6e63; }
+  h2 { color: #2b6e63; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin-top: 2em; }
+  code { background: #eee; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; }
+  .updated { color: #666; font-size: 0.9em; }
+  .highlight { background: #fff3e9; border-left: 4px solid #b0502e; padding: 10px 16px; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<h1>Shelf Life — Privacy Policy</h1>
+<p class="updated">Last updated: August 2026</p>
+
+<p>Shelf Life is a Chrome extension that reads a user's own Steam library to predict "boredom risk" and expected playtime before buying a new game. This page explains exactly what data it reads, what (if anything) leaves your device, and why.</p>
+
+<h2>Data read locally (never leaves your device)</h2>
+<p>When you open your own Steam games/wishlist page, Shelf Life reads the page content already visible to you: game titles, Steam app IDs, hours played, and achievements. This is stored only in your browser's local extension storage (<code>chrome.storage.local</code>). Any manual tags you add are also stored only locally and are never shared.</p>
+
+<h2>Data shared with the community server (opt-out, on by default)</h2>
+<p>To power community-driven recommendations, Shelf Life can share a small, anonymized slice of your library with a small server the developer operates. This is <strong>on by default</strong> and can be turned off at any time from the Library tab in the extension popup — everything personal keeps working with it off.</p>
+
+<p>What is sent, per game in your library:</p>
+<ul>
+  <li>Steam app ID</li>
+  <li>Hours played</li>
+  <li>Achievements unlocked / total</li>
+  <li>A coarse genre (e.g. "RPG", "Strategy"), auto-fetched from Steam's own public catalog</li>
+</ul>
+
+<div class="highlight">
+<strong>What is never sent:</strong> your Steam ID, username, profile information, which specific games you own beyond the list above, your manual tags, or anything else that could identify you.
+</div>
+
+<h2>How anonymization works</h2>
+<p>Your device is identified only by a random ID generated once, locally, on your own machine. Before this ID ever reaches the server, it is combined with a secret salt and cryptographically hashed. This means the server — and the developer — cannot connect a submission back to a specific Steam account, browser, or person.</p>
+
+<h2>Where data is processed and stored</h2>
+<p>Submitted data is processed by a Cloudflare Worker and stored in a Cloudflare D1 database, both operated directly by the developer. No data is sold, rented, or transferred to any third party. Cloudflare acts only as infrastructure/hosting for the developer's own server, the same way any web host does.</p>
+
+<p>The server only ever publishes back <strong>aggregated</strong> statistics — medians, drop-off rates, and which games tend to be favorited together across many anonymous submissions — never any individual person's raw data.</p>
+
+<h2>Why data is collected at all</h2>
+<p>Community features (recommendations based on what similar players enjoyed, broadly well-regarded games, etc.) only work if there is data from more than one person. Sharing is on by default so these features can function from the start, but it is fully optional and easy to turn off.</p>
+
+<h2>Data retention and deletion</h2>
+<p>Because submissions are not linked to any identifying information, there is no way for the developer to look up or delete "your" specific data on request — the anonymization is designed to make that link impossible in the first place, not just hidden. Turning off sharing stops any future submissions immediately; it does not retroactively remove data already submitted, since that data cannot be distinguished from anyone else's.</p>
+
+<h2>No AI, no ads, no monetization</h2>
+<p>Shelf Life uses deterministic, rule-based scoring — no machine learning, no profiling beyond what's described above. It is a non-commercial hobby project: no ads, no accounts, and no plans to monetize it, ever.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or how the extension handles data can be raised as an issue on the project's GitHub repository: <a href="https://github.com/jesteri1234/Shelf_life_extension">github.com/jesteri1234/Shelf_life_extension</a>.</p>
+
+</body>
+</html>
