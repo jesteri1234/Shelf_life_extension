@@ -1,0 +1,72 @@
+/* Shelf Life — store-page overlay card. Scoped under #shelf-life-overlay
+   with explicit values on every property so it can't inherit Steam's own
+   page styles (and can't leak into them either). */
+
+#shelf-life-overlay {
+  all: initial;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  width: 260px;
+  font-family: 'Motiva Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #E8EAEE;
+  background: #181E29;
+  border: 1px solid #2A3242;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  padding: 14px 16px;
+}
+#shelf-life-overlay * { box-sizing: border-box; font-family: inherit; }
+#shelf-life-overlay .sl-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#shelf-life-overlay .sl-brand {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #93A0B8;
+  text-transform: uppercase;
+}
+#shelf-life-overlay .sl-close {
+  cursor: pointer;
+  color: #5E6A80;
+  font-size: 15px;
+  line-height: 1;
+  padding: 2px 4px;
+  border: none;
+  background: none;
+}
+#shelf-life-overlay .sl-close:hover { color: #E8EAEE; }
+#shelf-life-overlay .sl-verdict {
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+#shelf-life-overlay .sl-verdict.good { color: #BEEBE0; }
+#shelf-life-overlay .sl-verdict.moderate { color: #F0E1AE; }
+#shelf-life-overlay .sl-verdict.avoid { color: #F6D3BE; }
+#shelf-life-overlay .sl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+#shelf-life-overlay .sl-stat { font-size: 11px; color: #93A0B8; }
+#shelf-life-overlay .sl-stat b {
+  display: block;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 15px;
+  color: #E8EAEE;
+  font-weight: 600;
+  margin-top: 1px;
+}
+#shelf-life-overlay .sl-note {
+  margin-top: 10px;
+  font-size: 10.5px;
+  color: #5E6A80;
+}
